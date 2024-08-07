@@ -2,7 +2,7 @@
 /*
 Plugin Name: Custom Breadcrumbs
 Description: Plugin untuk menambahkan breadcrumbs ke situs WordPress.
-Version: 1.0
+Version: 1.2
 Author: Theo Samuel
 */
 
@@ -265,3 +265,19 @@ function custom_breadcrumbs_shortcode() {
     return ob_get_clean();
 }
 add_shortcode('custom_breadcrumbs', 'custom_breadcrumbs_shortcode');
+
+function insert_breadcrumbs() {
+    if (function_exists('custom_breadcrumbs')) {
+        echo '<div class="breadcrumbs-container">';
+        custom_breadcrumbs();  // Menampilkan breadcrumbs
+        echo '</div>';
+    }
+}
+
+function enqueue_breadcrumbs_styles() {
+    wp_enqueue_style('breadcrumbs-style', plugins_url('style.css', __FILE__));
+}
+add_action('wp_enqueue_scripts', 'enqueue_breadcrumbs_styles');
+
+
+add_action('ocean_tax_description', 'insert_breadcrumbs');
