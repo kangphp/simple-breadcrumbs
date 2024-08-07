@@ -1,0 +1,25 @@
+#breadcrumbs
+{
+    font-weight: bold;
+}
+
+#breadcrumbs {
+    padding: 10px 0;
+    list-style: none;
+}
+
+#breadcrumbs li {
+    display: inline;
+    font-size: 14px;
+}
+#breadcrumbs li a {
+    color: #840560;
+    text-decoration: none;
+}
+#breadcrumbs li a:hover {
+    text-decoration: underline;
+}
+#breadcrumbs .separator {
+    margin: 0 5px;
+    color: #333;
+}
