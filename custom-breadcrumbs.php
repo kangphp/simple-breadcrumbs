@@ -231,3 +231,10 @@ function custom_breadcrumbs() {
         
     }
 }
+
+function custom_breadcrumbs_shortcode() {
+    ob_start();
+    custom_breadcrumbs();
+    return ob_get_clean();
+}
+add_shortcode('custom_breadcrumbs', 'custom_breadcrumbs_shortcode');
