@@ -20,16 +20,6 @@
 3. Activate **Simple Breadcrumbs** from the WordPress Plugins menu.
 4. Configure and use the breadcrumbs widget in Elementor or your theme.
 
-## Topics
-
-- wordpress
-- plugin
-- breadcrumbs
-- elementor
-- navigation
-- seo
-- php
-
 ## License
 
 MIT License
